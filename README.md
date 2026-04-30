@@ -1,14 +1,17 @@
 # Synapse Next.js Example
 
-Example showing how to use [@pyrx/synapse](https://www.npmjs.com/package/@pyrx/synapse) with Next.js App Router and Server Actions.
+All 16 SDK endpoints with [@pyrx/synapse](https://www.npmjs.com/package/@pyrx/synapse) + Next.js App Router.
 
 ## Setup
 
-1. `npm install`
-2. Copy `.env.example` to `.env` and fill in your API key
-3. `npm run dev`
+1. `npm install` → 2. Copy `.env.example` to `.env` → 3. `npm run dev`
 
-## Learn more
+## API Routes
 
-- [Synapse Documentation](https://synapse.pyrx.tech/developers)
-- [Node.js SDK Reference](https://synapse.pyrx.tech/developers/sdks/node)
+**Core:** POST /api/track, /api/track/batch, /api/identify, /api/identify/batch, /api/send
+**Contacts:** GET /api/contacts, GET/PUT/DELETE /api/contacts/[id]
+**Templates:** GET/POST /api/templates, GET/PUT/DELETE /api/templates/[slug], POST /api/templates/[slug]/preview
+
+Plus server action in `src/app/actions/track.ts` for form submissions.
+
+- [Synapse Docs](https://synapse.pyrx.tech/developers)
